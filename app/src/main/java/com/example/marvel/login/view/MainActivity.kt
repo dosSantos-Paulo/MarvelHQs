@@ -1,7 +1,8 @@
-package com.example.marvel
+package com.example.marvel.login.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.marvel.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
