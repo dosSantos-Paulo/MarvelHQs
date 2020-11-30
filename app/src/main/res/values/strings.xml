@@ -8,4 +8,6 @@
     <string name="remember">Remember</string>
     <string name="log_in">Log In</string>
     <string name="create_account">Create account</string>
+    <string name="need_a_name">need a name</string>
+    <string name="need_a_password">need a password</string>
 </resources>
