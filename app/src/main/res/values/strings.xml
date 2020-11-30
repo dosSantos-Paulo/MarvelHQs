@@ -13,4 +13,5 @@
     <string name="save">Save</string>
     <string name="name">Name</string>
     <string name="register">Register</string>
+    <string name="need_an_email">need an email</string>
 </resources>
