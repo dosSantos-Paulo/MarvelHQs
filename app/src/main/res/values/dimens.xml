@@ -11,4 +11,7 @@
 <!--    Login dimens-->
     <dimen name="welcomeTitle_Login">25sp</dimen>
     <dimen name="marginBottomWelcomeBox_Login">270dp</dimen>
+    <dimen name="circleImagem">120dp</dimen>
+    <dimen name="barHeight">55dp</dimen>
+    <dimen name="barText">22sp</dimen>
 </resources>

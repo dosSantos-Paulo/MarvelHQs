@@ -1,4 +1,4 @@
-package com.example.marvel
+package com.example.marvel.login.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import com.example.marvel.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputLayout
 
@@ -24,6 +27,7 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val navController = Navigation.findNavController(view)
         val name = view.findViewById<TextInputLayout>(R.id.editText_email_Login).editText
         val password = view.findViewById<TextInputLayout>(R.id.editText_password_Login).editText
         val remeberCheckBox = view.findViewById<CheckBox>(R.id.checkbox_remember_login)
@@ -41,7 +45,7 @@ class LoginFragment : Fragment() {
         }
 
         creatButton.setOnClickListener {
-            Toast.makeText(view.context, "clicou --> ${creatButton.text}", Toast.LENGTH_SHORT).show()
+            navController.navigate(R.id.action_loginFragment_to_signupFragment)
         }
     }
 

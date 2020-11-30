@@ -2,7 +2,8 @@
 <resources>
 <!--    System Colors   -->
     <color name="colorPrimary">#00162C</color>
-    <color name="colorPrimaryDark">#BB1C1F</color>
+    <color name="colorPrimaryDark">#EA2427</color>
+    <color name="colorPrimaryDark2">#BB1C1F</color>
     <color name="colorAccent">#343F4B</color>
 
 <!--    Text Colors    -->

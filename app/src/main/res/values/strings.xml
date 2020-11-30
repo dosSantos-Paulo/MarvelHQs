@@ -10,4 +10,7 @@
     <string name="create_account">Create account</string>
     <string name="need_a_name">need a name</string>
     <string name="need_a_password">need a password</string>
+    <string name="save">Save</string>
+    <string name="name">Name</string>
+    <string name="register">Register</string>
 </resources>
