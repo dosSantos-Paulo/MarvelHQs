@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    System Colors   -->
     <color name="colorPrimary">#00162C</color>
     <color name="colorPrimaryDark">#BB1C1F</color>
     <color name="colorAccent">#343F4B</color>
+
+<!--    Text Colors    -->
+    <color name="brightText">#FFFFFF</color>
+    <color name="grayText">#47525E</color>
+
+<!--    Extra Colors    -->
+    <color name="translucent">#00FFFFFF</color>
 </resources>

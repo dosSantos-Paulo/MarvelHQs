@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    Default dimens   -->
+    <dimen name="paddinMed">18dp</dimen>
+    <dimen name="marginMinMed">14dp</dimen>
+    <dimen name="margimLarge">50dp</dimen>
+    <dimen name="boxRadius">12dp</dimen>
+    <dimen name="marginMin">8dp</dimen>
+    <dimen name="marginMed">25dp</dimen>
+
+<!--    Login dimens-->
+    <dimen name="welcomeTitle_Login">25sp</dimen>
+    <dimen name="marginBottomWelcomeBox_Login">270dp</dimen>
+</resources>

@@ -1,10 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment"
-    android:background="@color/cardview_dark_background">
+    android:background="@color/colorPrimary"
+    tools:context=".LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/paddinMed">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardCornerRadius="@dimen/boxRadius"
+            android:layout_marginBottom="@dimen/marginBottomWelcomeBox_Login"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginMinMed"
+                android:layout_marginBottom="@dimen/margimLarge"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="@string/welcome_login"
+                android:textColor="@color/brightText"
+                android:textSize="@dimen/welcomeTitle_Login"
+                android:textStyle="bold" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/boxRadius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/marginMin">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/editText_email_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    app:boxBackgroundColor="@color/translucent"
+                    app:hintTextColor="@color/colorPrimaryDark">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/editText_password_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginMin"
+                    android:hint="@string/password"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    app:boxBackgroundColor="@color/translucent"
+                    app:hintTextColor="@color/colorPrimaryDark">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/checkbox_remember_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginMin"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:checked="true"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/remember"
+                    android:textColor="@color/grayText" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_login_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginMin"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/log_in"
+                    android:textAllCaps="true" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_createAccount_login"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/create_account"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grayText" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </FrameLayout>
