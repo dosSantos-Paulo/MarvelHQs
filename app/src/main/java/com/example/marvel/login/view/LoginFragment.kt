@@ -39,7 +39,7 @@ class LoginFragment : Fragment() {
             nullValidation(name, password)
 
             if (!name?.text?.trim().isNullOrEmpty() && !password?.text?.trim().isNullOrEmpty()){
-                Toast.makeText(view.context, "clicou --> ${loginButton.text}", Toast.LENGTH_SHORT).show()
+                navController.navigate(R.id.action_loginFragment_to_mainFragment)
             }
 
         }

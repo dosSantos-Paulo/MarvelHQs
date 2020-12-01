@@ -40,7 +40,8 @@ class SignupFragment : Fragment() {
             if (!name?.text?.trim().isNullOrEmpty() &&
                 !email?.text?.trim().isNullOrEmpty() &&
                 !password?.text?.trim().isNullOrEmpty()){
-                Toast.makeText(view.context, "clicou --> ${saveButton.text}", Toast.LENGTH_SHORT).show()
+
+                navController.navigate(R.id.action_signupFragment_to_mainFragment)
             }
         }
 
