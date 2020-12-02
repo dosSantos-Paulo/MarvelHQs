@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvel.R
@@ -22,9 +24,12 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val navController = Navigation.findNavController(view)
         val viewManager = GridLayoutManager(view.context, COLLUNM_SIZE)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_main)
-        val hqAdapter = HqListAdapter(testeItens(40))
+        val hqAdapter = HqListAdapter(testeItens(40)){
+            navController.navigate(R.id.action_mainFragment_to_comicDetailsFragment)
+        }
 
         recyclerView.apply {
             layoutManager = viewManager

@@ -7,6 +7,7 @@
     <dimen name="boxRadius">12dp</dimen>
     <dimen name="marginMin">8dp</dimen>
     <dimen name="marginMed">25dp</dimen>
+    <dimen name="marginMedLarge">40dp</dimen>
 
 <!--    Login dimens-->
     <dimen name="welcomeTitle_Login">25sp</dimen>
@@ -14,4 +15,9 @@
     <dimen name="circleImagem">120dp</dimen>
     <dimen name="barHeight">55dp</dimen>
     <dimen name="barText">22sp</dimen>
+    <dimen name="sumaryText">22sp</dimen>
+    <dimen name="coverWidth">100dp</dimen>
+    <dimen name="coverHeight">150dp</dimen>
+    <dimen name="coverWidthPlus">120dp</dimen>
+    <dimen name="coverHeightPlus">180dp</dimen>
 </resources>

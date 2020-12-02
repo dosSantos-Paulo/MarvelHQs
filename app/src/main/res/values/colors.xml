@@ -8,6 +8,7 @@
 
 <!--    Text Colors    -->
     <color name="brightText">#FFFFFF</color>
+    <color name="offWhiteText">#B6B6B6</color>
     <color name="grayText">#47525E</color>
 
 <!--    Extra Colors    -->

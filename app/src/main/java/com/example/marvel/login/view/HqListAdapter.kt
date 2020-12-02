@@ -12,7 +12,8 @@ import com.example.marvel.hq.ComicBook
 import com.squareup.picasso.Picasso
 
 class HqListAdapter(
-    private val _dataSet: MutableList<ComicBook>
+    private val _dataSet: MutableList<ComicBook>,
+    private val _listener: (ComicBook) -> Unit
 ) : RecyclerView.Adapter<HqListAdapter.HqViewHolder>() {
 
     class HqViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -37,6 +38,7 @@ class HqListAdapter(
     override fun onBindViewHolder(holder: HqViewHolder, position: Int) {
         val item = _dataSet[position]
         holder.bind(item)
+        holder.itemView.setOnClickListener { _listener(item) }
     }
 
     override fun getItemCount() = _dataSet.size

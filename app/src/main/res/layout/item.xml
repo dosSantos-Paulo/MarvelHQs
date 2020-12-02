@@ -7,19 +7,31 @@
     android:layout_gravity="center_horizontal"
     android:background="@color/colorPrimary">
 
-    <ImageView
-        android:id="@+id/img_item"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="@dimen/margimLarge"
-        android:scaleType="centerCrop"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/marginMed"
         android:layout_marginEnd="@dimen/marginMed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        android:layout_marginBottom="@dimen/margimLarge"
+        app:strokeWidth="4dp"
+        app:cardCornerRadius="0dp"
+        app:strokeColor="@color/brightText">
+
+        <ImageView
+            android:id="@+id/img_item"
+            android:layout_width="@dimen/coverWidth"
+            android:layout_height="@dimen/coverHeight"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
 
     <TextView
         android:id="@+id/txt_number_item"
@@ -29,8 +41,8 @@
         android:fontFamily="@font/roboto"
         android:textColor="@color/brightText"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/img_item"
-        app:layout_constraintTop_toBottomOf="@+id/img_item"
+        app:layout_constraintStart_toStartOf="@+id/materialCardview3"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardview3"
         tools:text="# 96" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
