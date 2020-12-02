@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvel.R
+import com.example.marvel.hq.ComicBook
 
 class MainFragment : Fragment() {
 
@@ -23,7 +24,7 @@ class MainFragment : Fragment() {
 
         val viewManager = GridLayoutManager(view.context, COLLUNM_SIZE)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_main)
-        val hqAdapter = HqListAdapter(testeItens(10))
+        val hqAdapter = HqListAdapter(testeItens(40))
 
         recyclerView.apply {
             layoutManager = viewManager
@@ -31,11 +32,22 @@ class MainFragment : Fragment() {
         }
     }
 
-    fun testeItens (contador: Int): MutableList<Int>{
-        val list = mutableListOf<Int>()
+    fun testeItens(contador: Int): MutableList<ComicBook> {
+        val list = mutableListOf<ComicBook>()
 
         for (i in 0 until contador) {
-            list.add(R.drawable.ic_launcher_background)
+            list.add(
+                ComicBook(
+                    "Amazing Spider Man(2014)",
+                    15,
+                    "the Gratest Super Hero",
+                    "April 30, 2014",
+                    5.99,
+                    38,
+                    R.drawable.cover_test,
+                    R.drawable.tumbnail_test
+                )
+            )
         }
 
         return list

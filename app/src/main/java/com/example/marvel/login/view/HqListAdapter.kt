@@ -1,23 +1,29 @@
 package com.example.marvel.login.view
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvel.R
+import com.example.marvel.hq.ComicBook
 import com.squareup.picasso.Picasso
 
-class HqListAdapter (
-    private val _dataSet: List<Int>
-): RecyclerView.Adapter<HqListAdapter.HqViewHolder>(){
+class HqListAdapter(
+    private val _dataSet: MutableList<ComicBook>
+) : RecyclerView.Adapter<HqListAdapter.HqViewHolder>() {
 
-    class HqViewHolder (view: View): RecyclerView.ViewHolder(view){
+    class HqViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val _hqImage: ImageView = view.findViewById(R.id.img_item)
+        private val _hqNumbEdition: TextView = view.findViewById(R.id.txt_number_item)
 
-        fun bind(item: Int){
-            Picasso.get().load(item).into(_hqImage)
+        @SuppressLint("SetTextI18n")
+        fun bind(item: ComicBook) {
+            Picasso.get().load(item.cover).into(_hqImage)
+            _hqNumbEdition.text = "# ${item.numberEdition}"
         }
 
 
