@@ -8,12 +8,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvel.R
-import com.example.marvel.hq.model.ComicBook
+import com.example.marvel.hq.model.ComicModel
 import com.squareup.picasso.Picasso
 
 class HqListAdapter(
-    private val _dataSet: MutableList<ComicBook>,
-    private val _listener: (ComicBook) -> Unit
+    private val _dataSet: MutableList<ComicModel>,
+    private val _listener: (ComicModel) -> Unit
 ) : RecyclerView.Adapter<HqListAdapter.HqViewHolder>() {
 
     class HqViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -22,9 +22,10 @@ class HqListAdapter(
         private val _hqNumbEdition: TextView = view.findViewById(R.id.txt_number_item)
 
         @SuppressLint("SetTextI18n")
-        fun bind(item: ComicBook) {
-            Picasso.get().load(item.cover).into(_hqImage)
-            _hqNumbEdition.text = "# ${item.numberEdition}"
+        fun bind(item: ComicModel) {
+            val image = "${item.thumbnail.path}/portrait_uncanny.${item.thumbnail.extension}"
+            Picasso.get().load(image).into(_hqImage)
+            _hqNumbEdition.text = "# ${item.id}"
         }
 
 
