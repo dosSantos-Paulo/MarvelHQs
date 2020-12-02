@@ -34,7 +34,9 @@
         android:label="MainFragment" >
         <action
             android:id="@+id/action_mainFragment_to_comicDetailsFragment"
-            app:destination="@id/comicDetailsFragment" />
+            app:destination="@id/comicDetailsFragment"
+            app:enterAnim="@anim/to_up"
+            app:popExitAnim="@anim/from_up" />
     </fragment>
     <fragment
         android:id="@+id/comicDetailsFragment"

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -26,8 +27,17 @@ class MainFragment : Fragment() {
         val navController = Navigation.findNavController(view)
         val viewManager = GridLayoutManager(view.context, COLLUNM_SIZE)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView_main)
-        val hqAdapter = HqListAdapter(testeItens(40)){
-            navController.navigate(R.id.action_mainFragment_to_comicDetailsFragment)
+        val hqAdapter = HqListAdapter(testeItens(40)) {
+            val bundle = bundleOf(
+                TUMBNAIL_KEY to it.tumbnail,
+                COVER_KEY to it.cover,
+                TITLE_KEY to it.title,
+                SUMMARY_KEY to it.summary,
+                PUBLISHED_KEY to it.published,
+                PRICE_KEY to it.price,
+                PAGE_KEY to it.pages
+            )
+            navController.navigate(R.id.action_mainFragment_to_comicDetailsFragment, bundle)
         }
 
         recyclerView.apply {
@@ -43,11 +53,11 @@ class MainFragment : Fragment() {
             list.add(
                 ComicBook(
                     "Amazing Spider Man(2014)",
-                    15,
+                    103,
                     getString(R.string.lorenIpsun),
-                    "April 30, 2014",
-                    5.99,
-                    38,
+                    "May 31, 1991",
+                    99.99,
+                    29,
                     R.drawable.cover_test,
                     R.drawable.tumbnail_test
                 )
@@ -59,6 +69,13 @@ class MainFragment : Fragment() {
 
     companion object {
         const val COLLUNM_SIZE = 3
+        const val TUMBNAIL_KEY = "TUMBNAIL"
+        const val COVER_KEY = "COVER"
+        const val TITLE_KEY = "TITLE"
+        const val SUMMARY_KEY = "SUMMARY"
+        const val PUBLISHED_KEY = "PUBLISHED"
+        const val PRICE_KEY = "PRICE"
+        const val PAGE_KEY = "PAGE"
     }
 
 }
