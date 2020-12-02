@@ -1,4 +1,4 @@
-package com.example.marvel.hq
+package com.example.marvel.hq.model
 
 data class ComicBook(
     val title: String,

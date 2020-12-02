@@ -1,4 +1,4 @@
-package com.example.marvel.login.view
+package com.example.marvel.hq.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,11 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvel.R
-import com.example.marvel.hq.ComicBook
+import com.example.marvel.hq.model.ComicBook
 
 class MainFragment : Fragment() {
 
@@ -45,7 +44,7 @@ class MainFragment : Fragment() {
                 ComicBook(
                     "Amazing Spider Man(2014)",
                     15,
-                    "the Gratest Super Hero",
+                    getString(R.string.lorenIpsun),
                     "April 30, 2014",
                     5.99,
                     38,

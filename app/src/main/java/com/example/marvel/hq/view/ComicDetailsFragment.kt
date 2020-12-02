@@ -1,4 +1,4 @@
-package com.example.marvel.login.view
+package com.example.marvel.hq.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

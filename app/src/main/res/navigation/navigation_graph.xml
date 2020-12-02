@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.marvel.login.view.MainFragment"
+        android:name="com.example.marvel.hq.view.MainFragment"
         android:label="MainFragment" >
         <action
             android:id="@+id/action_mainFragment_to_comicDetailsFragment"
@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/comicDetailsFragment"
-        android:name="com.example.marvel.login.view.ComicDetailsFragment"
+        android:name="com.example.marvel.hq.view.ComicDetailsFragment"
         android:label="fragment_comic_details"
         tools:layout="@layout/fragment_comic_details" />
 </navigation>

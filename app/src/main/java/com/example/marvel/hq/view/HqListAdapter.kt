@@ -1,4 +1,4 @@
-package com.example.marvel.login.view
+package com.example.marvel.hq.view
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvel.R
-import com.example.marvel.hq.ComicBook
+import com.example.marvel.hq.model.ComicBook
 import com.squareup.picasso.Picasso
 
 class HqListAdapter(
