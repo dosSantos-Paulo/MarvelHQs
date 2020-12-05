@@ -14,6 +14,8 @@
             android:id="@+id/action_loginFragment_to_signupFragment"
             app:destination="@id/signupFragment"
             app:enterAnim="@anim/to_up"
+            app:exitAnim="@anim/from_down"
+            app:popEnterAnim="@anim/to_down"
             app:popExitAnim="@anim/from_up" />
         <action
             android:id="@+id/action_loginFragment_to_mainFragment"
@@ -36,6 +38,8 @@
             android:id="@+id/action_mainFragment_to_comicDetailsFragment"
             app:destination="@id/comicDetailsFragment"
             app:enterAnim="@anim/to_up"
+            app:exitAnim="@anim/from_down"
+            app:popEnterAnim="@anim/to_down"
             app:popExitAnim="@anim/from_up" />
     </fragment>
     <fragment
@@ -47,6 +51,8 @@
             android:id="@+id/action_comicDetailsFragment_to_openCardFragment"
             app:destination="@id/openCardFragment"
             app:enterAnim="@anim/to_up"
+            app:exitAnim="@anim/from_down"
+            app:popEnterAnim="@anim/to_down"
             app:popExitAnim="@anim/from_up" />
     </fragment>
     <fragment
