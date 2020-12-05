@@ -9,7 +9,7 @@
         android:id="@+id/loginFragment"
         android:name="com.example.marvel.login.view.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_signupFragment"
             app:destination="@id/signupFragment"
@@ -19,34 +19,42 @@
             app:popExitAnim="@anim/from_up" />
         <action
             android:id="@+id/action_loginFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/to_left"
+            app:exitAnim="@anim/from_right"
+            app:popEnterAnim="@anim/to_right"
+            app:popExitAnim="@anim/from_left" />
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
         android:name="com.example.marvel.login.view.SignupFragment"
         android:label="fragment_signup"
-        tools:layout="@layout/fragment_signup" >
+        tools:layout="@layout/fragment_signup">
         <action
             android:id="@+id/action_signupFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/to_left"
+            app:exitAnim="@anim/from_right"
+            app:popEnterAnim="@anim/to_right"
+            app:popExitAnim="@anim/from_left"/>
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.marvel.hq.view.MainFragment"
-        android:label="MainFragment" >
+        android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_comicDetailsFragment"
             app:destination="@id/comicDetailsFragment"
-            app:enterAnim="@anim/to_up"
-            app:exitAnim="@anim/from_down"
-            app:popEnterAnim="@anim/to_down"
-            app:popExitAnim="@anim/from_up" />
+            app:enterAnim="@anim/to_left"
+            app:exitAnim="@anim/from_right"
+            app:popEnterAnim="@anim/to_right"
+            app:popExitAnim="@anim/from_left" />
     </fragment>
     <fragment
         android:id="@+id/comicDetailsFragment"
         android:name="com.example.marvel.hq.view.ComicDetailsFragment"
         android:label="fragment_comic_details"
-        tools:layout="@layout/fragment_comic_details" >
+        tools:layout="@layout/fragment_comic_details">
         <action
             android:id="@+id/action_comicDetailsFragment_to_openCardFragment"
             app:destination="@id/openCardFragment"
