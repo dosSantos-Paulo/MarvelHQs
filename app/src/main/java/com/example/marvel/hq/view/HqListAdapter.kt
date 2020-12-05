@@ -27,8 +27,6 @@ class HqListAdapter(
             Picasso.get().load(image).into(_hqImage)
             _hqNumbEdition.text = "# ${item.issueNumber}"
         }
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HqViewHolder {
