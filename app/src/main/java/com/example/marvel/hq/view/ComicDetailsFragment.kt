@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.example.marvel.R
@@ -41,6 +42,8 @@ class ComicDetailsFragment : Fragment() {
             ComicViewModel.ComicViewModelFactory(ComicRepository())
         ).get(ComicViewModel::class.java)
 
+        val navController = Navigation.findNavController(view)
+
         if (getId != null) {
             _viewModel.getComic(getId).observe(viewLifecycleOwner) {
                 val newThumbnail  = "${it.thumbnail.path}.${it.thumbnail.extension}"
@@ -70,10 +73,13 @@ class ComicDetailsFragment : Fragment() {
 
                 Picasso.get().load(newConver).into(cover)
                 Picasso.get().load(newThumbnail).into(thumbnail)
+
+                cover.setOnClickListener {
+                    val bundle = bundleOf("COVER" to newConver)
+                    navController.navigate(R.id.action_comicDetailsFragment_to_openCardFragment, bundle)
+                }
             }
         }
-
-        val navController = Navigation.findNavController(view)
 
         val arrowBack = view.findViewById<ImageView>(R.id.arrowBack_comicDetails)
 

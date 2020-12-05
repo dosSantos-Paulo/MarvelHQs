@@ -13,4 +13,5 @@
 
 <!--    Extra Colors    -->
     <color name="translucent">#00FFFFFF</color>
+    <color name="translucent25Dark">#B2000000</color>
 </resources>

@@ -42,5 +42,16 @@
         android:id="@+id/comicDetailsFragment"
         android:name="com.example.marvel.hq.view.ComicDetailsFragment"
         android:label="fragment_comic_details"
-        tools:layout="@layout/fragment_comic_details" />
+        tools:layout="@layout/fragment_comic_details" >
+        <action
+            android:id="@+id/action_comicDetailsFragment_to_openCardFragment"
+            app:destination="@id/openCardFragment"
+            app:enterAnim="@anim/to_up"
+            app:popExitAnim="@anim/from_up" />
+    </fragment>
+    <fragment
+        android:id="@+id/openCardFragment"
+        android:name="com.example.marvel.OpenCardFragment"
+        android:label="fragment_open_card"
+        tools:layout="@layout/fragment_open_card" />
 </navigation>
