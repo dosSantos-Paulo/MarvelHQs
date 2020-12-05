@@ -36,7 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="@dimen/margimLarge"
-                    android:contentDescription="@string/tumbnail"
+                    android:contentDescription="@string/thumbnail"
                     android:scaleType="centerCrop"
                     android:src="@drawable/tumbnail_test"
                     app:layout_collapseMode="parallax" />

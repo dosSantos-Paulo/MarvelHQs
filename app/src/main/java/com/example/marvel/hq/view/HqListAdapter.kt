@@ -18,14 +18,14 @@ class HqListAdapter(
 
     class HqViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        private val _hqImage: ImageView = view.findViewById(R.id.img_item)
+        private val _hqImage: ImageView = view.findViewById(R.id.image_item)
         private val _hqNumbEdition: TextView = view.findViewById(R.id.txt_number_item)
 
         @SuppressLint("SetTextI18n")
         fun bind(item: ComicModel) {
             val image = "${item.thumbnail.path}/portrait_uncanny.${item.thumbnail.extension}"
             Picasso.get().load(image).into(_hqImage)
-            _hqNumbEdition.text = "# ${item.id}"
+            _hqNumbEdition.text = "# ${item.issueNumber}"
         }
 
 

@@ -23,7 +23,7 @@
         app:strokeColor="@color/brightText">
 
         <ImageView
-            android:id="@+id/img_item"
+            android:id="@+id/image_item"
             android:layout_width="@dimen/coverWidth"
             android:layout_height="@dimen/coverHeight"
             android:scaleType="centerCrop"

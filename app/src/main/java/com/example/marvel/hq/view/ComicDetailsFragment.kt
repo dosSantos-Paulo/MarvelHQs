@@ -1,7 +1,6 @@
 package com.example.marvel.hq.view
 
 import android.os.Bundle
-import android.provider.MediaStore.Audio.AudioColumns.TITLE_KEY
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -44,7 +43,7 @@ class ComicDetailsFragment : Fragment() {
 
         if (getId != null) {
             _viewModel.getComic(getId).observe(viewLifecycleOwner) {
-                val newTumbnail  = "${it.thumbnail.path}${it.thumbnail.extension}"
+                val newThumbnail  = "${it.thumbnail.path}.${it.thumbnail.extension}"
                 val newConver = "${it.thumbnail.path}/portrait_uncanny.${it.thumbnail.extension}"
                 val newPage = it.pageCount
 
@@ -54,7 +53,7 @@ class ComicDetailsFragment : Fragment() {
                 val newSummary = it.description
                 val newPublished = it.dates[0].date.split("T")
 
-                val tumbnail = view.findViewById<ImageView>(R.id.img_tumbnail_comicDetails)
+                val thumbnail = view.findViewById<ImageView>(R.id.img_tumbnail_comicDetails)
                 val cover = view.findViewById<ImageView>(R.id.img_cover_comicDetails)
 
                 val pages = view.findViewById<TextView>(R.id.txt_totalPages_comicDetails)
@@ -65,12 +64,12 @@ class ComicDetailsFragment : Fragment() {
 
                 pages.text = newPage.toString()
                 price.text = newPrice.toString()
-                title.text = newTitle.toString()
-                summary.text = newSummary.toString()
+                title.text = newTitle
+                summary.text = newSummary
                 published.text = newPublished.toString()
 
-                Picasso.get().load("${it.thumbnail.path}/portrait_uncanny.${it.thumbnail.extension}").into(cover)
-                Picasso.get().load("${it.thumbnail.path}${it.thumbnail.extension}").into(tumbnail)
+                Picasso.get().load(newConver).into(cover)
+                Picasso.get().load(newThumbnail).into(thumbnail)
             }
         }
 
